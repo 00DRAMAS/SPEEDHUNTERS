@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta author= "Mamadu drammeh">
+	<meta name=”copyright” content=”propiedad del copyright Mamadu drammeh”>
+	<link rel="stylesheet" href="css/events.css">
+	<title>スピードハンターズ</title>
+</head>
+<header>
+	<nav>
+		<a href="index.html"><div id="ball">
+			<img src="media/LOGO-SH-blanco-2.svg" alt="LOGO">
+		</div></a>
+		<!-- <video id="navVideo" autoplay muted loop>
+        	<source src="media/Animacion S.H.mp4" type="video/mp4">
+    	</video> -->
+		<div id="menu"> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="57" height="38" viewBox="0 0 57 38" fill="none">
+				<path d="M3 3H54M3 17.9565H54M3 35H54" stroke="white" stroke-width="6" stroke-linecap="round"/>
+			</svg>
+		</div>
+	</nav>
+</header>
+<body>
+	<a href="index.html" style="display: contents;"><div id="Portada">
+		<img src="media/hero-image.jpg" alt="Hero Image">
+		<div class="gradient-overlay"></div>
+		<!-- animacion home -->
+		<video id="heroVideo" autoplay muted loop>
+			<source src="media/Animacion S.H 2.mp4" type="video/mp4">
+		</video>
+	</div>
+  </a>
+
+	<!-- -------------------------MENU DE NAVEGACION-------------------------------- -->
+	<div id="nav-overlay" class="hidden">
+		<div class="nav-content">
+			<div class="nav-header">
+				<img src="media/LOGO-SH-blanco-2.svg" alt="Logo" class="nav-logo">
+				<div id="close-menu" class="menu-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+						<path d="M35 35L3 3M35 3L3 35" stroke="white" stroke-width="6" stroke-linecap="round"/>
+					</svg>
+				</div>
+			</div>
+			<ul class="nav-pages">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="feats.html">FEATURES</a></li>
+				<li><a href="events.html">EVENTS</a></li>
+				<li><a href="404.html">COMUNITY</a></li>
+				<li><a href="404.html">PROFILE</a></li>
+				<li><a href="404.html">ABOUT US</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+<!-- ------------------------EVENTOS-------------------------------- -->
+
+    <div id="FeatsTittle">
+        <h1>EVENTS</h1>
+    </div>
+
+    <div id="content">
+        <h2 class="section-title1">FEATURED EVENTS</h2>
+    </div>
+
+    
+
+        <div class="events-grid">
+            <div class="event-container" style="background-image: url('media/F40.jpg');">
+                <div class="event-date">
+                    <span class="event-day">19</span>
+                    <span class="event-month">December</span>
+                </div>
+                <div class="event-info">
+                    <h2>SEMA</h2>
+                    <h4>SO-FI stadium, US</h4>
+                </div>
+            </div>
+            
+            <div class="event-container" style="background-image: url('media/Complexcon.jpg');">
+                <div class="event-date">
+                    <span class="event-day">30</span>
+                    <span class="event-month">December</span>
+                </div>
+                <div class="event-info">
+                    <h2>ComplexCon</h2>
+                    <h4>Las Vegas Convention Center, NV</h4>
+                </div>
+            </div>
+
+            <div class="event-container" style="background-image: url('media/E22.jpg');">
+                <div class="event-date">
+                    <span class="event-day">05</span>
+                    <span class="event-month">March</span>
+                </div>
+                <div class="event-info">
+                    <h2>24h Le Mans</h2>
+                    <h4>Monaco, MC</h4>
+                </div>
+            </div>
+            
+            <div class="event-container" style="background-image: url('media/formuladrift.jpg');">
+                <div class="event-date">
+                    <span class="event-day">09</span>
+                    <span class="event-month">January</span>
+                </div>
+                <div class="event-info">
+                    <h2>Formula Drift</h2>
+                    <h4>Longbeach, CA</h4>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!----------------OVERLAY DEL EVENTO---------->
+
+    <div id="event-overlay" class="event-overlay hidden">
+        <div class="event-overlay-content">
+            <div class="event-overlay-left">
+            <div class="event-overlay-bg"></div>
+            <div class="event-overlay-date">
+                <span class="event-overlay-day"></span>
+                <span class="event-overlay-month"></span>
+            </div>
+            </div>
+            <div class="event-overlay-right">
+            <button class="event-overlay-close">&times;</button>
+            <h1 class="event-overlay-title"></h1>
+            <div class="event-overlay-underline"></div>
+            <div class="event-overlay-details">
+                <div class="event-overlay-desc">
+                    <p class="event-overlay-description"></p>
+                    <button class="event-overlay-register">
+                        <span class="register-lines"></span>
+                        <span class="register-text">REGISTER</span>
+                    </button>
+                </div>
+                <div class="event-overlay-info">
+                <p><strong>Location:</strong> <span class="event-overlay-location"></span></p>
+                <p><strong>Date:</strong> <span class="event-overlay-full-date"></span></p>
+                <p><strong>Time:</strong> <span class="event-overlay-time"></span></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------OVERLAY REGISTRO ------------->
+     
+<div id="register-overlay" class="register-overlay hidden">
+  <div class="register-overlay-content">
+    <div class="register-confirmation hidden">
+        <p>Thank you for registering! Your submission has been received.</p>   
+    </div>
+    <button class="register-overlay-close">&times;</button>
+    <h2 class="register-title">EVENT REGISTRATION</h2>
+    <form class="event-register-form">
+      <label>
+        Name:<br>
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Email:<br>
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Phone:<br>
+        <input type="tel" name="phone">
+      </label>
+      <label>
+        Number of Tickets:<br>
+        <input type="number" name="tickets" min="1" max="10" value="1" required>
+      </label>
+      <label>
+        Message:<br>
+        <textarea name="message" rows="2"></textarea>
+      </label>
+      <label class="terms">
+        <input type="checkbox" required>
+        I accept the  <a href="#">terms & conditions</a>
+      </label>
+      <button type="submit" class="event-register-submit">Submit Registration</button>
+    </form>
+  </div>
+</div>
+
+
+
+<!-- --------------------RFOOTER-------------------- -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <!-- LEFT SIDE -->
+    <div class="footer-left">
+      <div class="footer-about">
+        <h2 class="footer-title">ABOUT US</h2>
+        <p class="footer-desc">
+          Speedhunters is an international collective of 
+		  photographers, writers and drivers with a shared 
+		  passion for uncovering the world's most exciting 
+		  car culture stories.
+        </p>
+        <button class="footer-learn-more">LEARN MORE</button>
+      </div>
+      <div class="footer-contact">
+		<h2 class="footer-title">CONTACT US</h2>
+        <div class="contact-info">We're always 
+			very interested to hear your own
+			 stories as well as to receive your 
+			 feedback. Please take a look at our 
+			 			 <a href="https://www.speedhunters.com/frequently-asked-questions-faq/" target="_blank">FAQ</a>
+FAQ</a>
+			  first but if you don't find what you 
+			 are looking for then you are welcome to 
+			 contact us via email, thank you.
+			 <br>
+			 <br>
+			<a href="mailto:B3d7S@example.com">enquiries@speedhunters.com</a>
+		</div>
+        <!-- <div>Phone: +81 123 456 789</div>
+        <div>Address: Tokyo, Japan</div> -->
+      </div>
+      <img src="media/Recurso 9ENG2.png" alt="JP Logo" class="footer-jplogo">
+      <hr class="footer-divider">
+			<svg xmlns="http://www.w3.org/2000/svg" width="45" height="21" viewBox="0 0 45 21" fill="none">
+				<g clip-path="url(#clip0_	389_1475)">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M31.1756 0L20.093 16.8105H7.94743L10.7465 12.6752H18.3022L21.0449 8.48647H4.19816L1.45553 12.6752H5.48527L0 21H22.6124L31.1756 7.89559L34.3099 12.6752H31.6229L28.8811 16.8105H37.0526L39.7952 21H45L31.1756 0Z" fill="white"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M27.5372 0.160156H9.68307L6.94043 4.34964L24.7946 4.29632L27.5372 0.160156Z" fill="white"/>
+				</g>
+				<defs>
+				<clipPath id="clip0_389_1475">
+				<rect width="45" height="21" fill="white"/>
+				</clipPath>
+				</defs>
+			</svg>
+      <div class="footer-copyright">
+        <!-- &copy;--> <p>© 2025 ELECTRONIC ARTS INC.<br> 
+		TRADEMARKS BELONG TO THEIR RESPECTIVE OWNERS. ALL RIGHTS RESERVED</p>
+      </div>
+    </div>
+    <!-- RIGHT SIDE -->
+    <div class="footer-right">
+      <form class="footer-newsletter">
+        <label for="newsletter-email" class="newsletter-label">Join the hunt!</label>
+        <div class="newsletter-row">
+          <input type="email" id="newsletter-email" placeholder="Your email" required>
+          <button type="submit">SUBSCRIBE	</button>
+        </div>
+      </form>
+      <div class="footer-social-row">
+        <a href="https://www.instagram.com/thespeedhunters/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none">
+				<path d="M15.1388 3.40614C19.1808 3.40614 19.6602 3.42137 21.2561 3.49498C22.9062 3.57114 24.6055 3.94936 25.8078 5.15892C27.0214 6.3799 27.386 8.07302 27.4617 9.73822C27.5349 11.3438 27.55 11.8261
+				 27.55 15.8926C27.55 19.9592 27.5349 20.4415 27.4617 22.047C27.3873 23.6983 27.0025 25.4244 25.8078 26.6263C24.5942 27.8473 22.9125 28.2141 21.2561 28.2903C19.6602 28.3639 19.1808 28.3791 15.1388 
+				 28.3791C11.0967 28.3791 10.6173 28.3639 9.02145 28.2903C7.39277 28.2154 5.65433 27.8194 4.46972 26.6263C3.2624 25.4117 2.89151 23.7021 2.81581 22.047C2.74264 20.4415 2.7275 19.9592 2.7275 
+				15.8926C2.7275 11.8261 2.74264 11.3438 2.81581 9.73822C2.89024 8.09333 3.27881 6.35705 4.46972 5.15892C5.68082 3.94048 7.37006 3.57114 9.02145 3.49498C10.6173 3.42137 11.0967 3.40614 15.1388 
+				3.40614ZM15.1388 0.662109C11.0273 0.662109 10.5114 0.679878 8.89655 0.753492C6.55635 0.861375 4.23255 1.51629 2.54079 3.2183C0.842725 4.92665 0.198066 7.25946 0.0908326 9.61257C0.0176619 11.2372 
+				0 11.7563 0 15.8926C0 20.029 0.0176619 20.5481 0.0908326 22.1727C0.198066 24.5245 0.851556 26.8687 2.54079 28.5669C4.23759 30.274 6.56013 30.9239 8.89655 31.0317C10.5114 31.1054 11.0273 31.1231 
+				15.1388 31.1231C19.2502 31.1231 19.7662 31.1054 21.381 31.0317C23.7199 30.9239 26.0463 30.2677 27.7367 28.5669C29.4361 26.8573 30.0795 24.5258 30.1867 22.1727C30.2599 20.5481 30.2775 20.029 30.2775 
+				15.8926C30.2775 11.7563 30.2599 11.2372 30.1867 9.61257C30.0795 7.25819 29.4272 4.91904 27.7367 3.2183C26.0425 1.51375 23.7136 
+				0.860106 21.381 0.753492C19.7662 0.679878 19.2502 0.662109 15.1388 0.662109Z" fill="white"/>
+				<path d="M15.139 8.07227C10.8459 8.07227 7.36523 11.574 7.36523 15.8931C7.36523 20.2123 10.8459 23.714 15.139 23.714C19.4321 23.714 22.9128 20.2123 22.9128 15.8931C22.9128 11.574 19.4321 8.07227 15.139 8.07227ZM15.139 
+				20.97C12.3522 20.97 10.0927 18.6968 10.0927 15.8931C10.0927 13.0895 12.3522 10.8163 15.139 10.8163C17.9258 10.8163 20.1853 13.0895 20.1853 15.8931C20.1853 18.6968 17.9258 20.97 15.139 20.97Z" fill="white"/>
+				<path d="M23.2209 9.58892C24.2243 9.58892 25.0376 8.77064 25.0376 7.76126C25.0376 6.75187 24.2243 5.93359 23.2209 5.93359C22.2176 5.93359 21.4043 6.75187 21.4043 7.76126C21.4043 8.77064 22.2176 9.58892 23.2209 9.58892Z" fill="white"/>
+			</svg></a>
+        <a href="https://x.com/Speedhunters" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30 26" fill="none">
+				<path d="M23.625 0H28.2275L18.175 11.0124L30 26H20.7437L13.4888 16.9123L5.19625 26H0.58625L11.3363 14.2182L0 0H9.49125L16.0425 8.30634L23.625 0ZM22.0088 23.3622H24.5575L8.1025 2.49993H5.365L22.0088 23.3622Z" fill="white"/>
+			</svg></a>
+        <a href="https://www.facebook.com/Speedhunters/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29" fill="none">
+				<path d="M31 14.5881C31 21.8688 25.3244 27.9047 17.9154 29V18.8333H21.5179L22.2038 14.627H17.9154V11.8978C17.9154 10.7466 18.5147 9.62574 20.4342 9.62574H22.3833V6.04435C22.3833 6.04435 20.6137 5.75988 18.9229 5.75988C15.3915 
+				5.75988 13.0846 7.77426 13.0846 11.4201V14.6258H9.15921V18.8321H13.0846V28.9988C5.67687 27.9022 0 21.8676 0 14.5881C0 6.53184 6.94012 0 15.5 0C24.0599 0 31 6.53062 31 14.5881Z" fill="white"/>
+			</svg></a>
+      </div>
+
+	  <!-- Place this inside your .footer-content, after .footer-copyright and at the same level (not inside .footer-copyright) -->
+		<div class="footer-terms">
+			<a href="#">TERMS OF SERVICE</a>
+			<span>//</span>
+			<a href="#">PRIVACY & COOKIE POLICY</a>
+			<span>//</span>
+			<a href="#">LEGAL NOTICES</a>
+			<span>//</span>
+			<a href="#">ADVERTISING OPPORTUNITIES</a>
+		</div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+const eventsData = [
+  {
+    image: 'media/F40.jpg',
+    day: '19',
+    month: 'December',
+    title: 'SEMA',
+    description: 'Get ready for an unforgettable night of horsepower, headlights, and high-octane culture. On April 19th, the heart of Osaka will rumble with the sound of turbocharged legends at the Osaka JDM Night Meet — an underground gathering celebrating Japan’s most iconic street machines.From classic Nissan Skylines and drift-built AE86s to fully-tuned Supras and RX-7s, this meet is where the true spirit of JDM comes alive. Expect neon lights reflecting  off polished bodywork, rare builds, custom mods, and a community driven by passion.',
+    location: 'SO-FI stadium, US',
+    fullDate: 'December 19, 2025',
+    time: '10:00 AM - 6:00 PM'
+  },
+//   {
+//     image: 'media/Complexcon.jpg',
+//     day: '14',
+//     month: 'December',
+//     title: 'ComplexCon',
+//     description: 'Experience the thrill of endurance racing at the legendary 24 Hours of Le Mans. Witness top teams and drivers battle for glory.',
+//     location: 'Monaco, MC',
+//     fullDate: 'March 5, 2025',
+//     time: 'All Day'
+//   },
+//   {
+//     image: 'media/E4.jpg',
+//     day: '14',
+//     month: 'April',
+//     title: 'Euro Meet',
+//     description: 'Join Europe’s biggest car meet in Berlin. From classics to supercars, enjoy a day of automotive passion and networking.',
+//     location: 'Berlin, DE',
+//     fullDate: 'April 14, 2025',
+//     time: '12:00 PM - 8:00 PM'
+//   }
+  // Add more events as needed
+];
+
+document.querySelectorAll('.event-container').forEach((card, idx) => {
+  card.addEventListener('click', () => {
+    const data = eventsData[idx];
+    document.querySelector('.event-overlay-bg').style.backgroundImage = `url('${data.image}')`;
+    document.querySelector('.event-overlay-day').textContent = data.day;
+    document.querySelector('.event-overlay-month').textContent = data.month;
+    document.querySelector('.event-overlay-title').textContent = data.title;
+    document.querySelector('.event-overlay-description').textContent = data.description;
+    document.querySelector('.event-overlay-location').textContent = data.location;
+    document.querySelector('.event-overlay-full-date').textContent = data.fullDate;
+    document.querySelector('.event-overlay-time').textContent = data.time;
+    document.getElementById('event-overlay').classList.remove('hidden');
+  });
+});
+
+document.querySelector('.event-overlay-close').addEventListener('click', () => {
+  document.getElementById('event-overlay').classList.add('hidden');
+});
+
+
+// FORMULARIO DE REGISTRO EVENTO
+
+document.querySelector('.event-overlay-register').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('register-overlay').classList.remove('hidden');
+});
+
+document.querySelector('.register-overlay-close').addEventListener('click', function() {
+  document.getElementById('register-overlay').classList.add('hidden');
+});
+
+
+// MENSAJE DE CONFIRMACION
+
+document.querySelector('.event-register-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  this.classList.add('hidden');
+  document.querySelector('.register-confirmation').classList.remove('hidden');
+});
+
+</script>
+
+
+
+
+
+
+
+</body>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+      <script src="js/carousel.js"></script>
+	<script src="js/navigation.js"></script>
+	<script src="js/heroVideoSticky.js"></script>
+	<script src="js/event-carousel.js"></script>
+    <!-- <script src="js/event-overlay.js"></script> -->
+
+
+    </html>
